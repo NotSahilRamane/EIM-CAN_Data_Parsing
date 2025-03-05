@@ -13,10 +13,13 @@ print("Reading file...")
 
 
 def convert_timestamp_to_ist(timestamp):
-    print(timestamp)
-    timestamp = float(timestamp)
-    timestamp = datetime.datetime.fromtimestamp(timestamp).strftime('%c')
-    return timestamp
+    # print(timestamp)
+    if type(timestamp) == str:
+        return timestamp
+    else:
+        timestamp = float(timestamp)
+        timestamp = datetime.datetime.fromtimestamp(timestamp).strftime('%c')
+        return timestamp
 
 
 
