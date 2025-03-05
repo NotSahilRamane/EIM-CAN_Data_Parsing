@@ -1,0 +1,245 @@
+VERSION "20230131-002421-820"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU
+
+
+BO_ 2566862831 VCU_1: 8 VCU
+ SG_ VBUS_VCU1_N_AvgCellVoltage : 0|8@1+ (0.02,0) [0|5] "V" Vector__XXX
+ SG_ VBUS_VCU1_N_AverageCellTemperatu : 24|8@1+ (1,-40) [-40|125] "℃" Vector__XXX
+ SG_ VBUS_VCU1_RemainChargeTime : 48|16@1+ (1,0) [0|65535] "min" Vector__XXX
+
+BO_ 2566856431 VCU_2: 8 VCU
+ SG_ VBUS_VCU2_N_MotorSpeed : 0|16@1+ (1,-10000) [-10000|10000] "rpm" Vector__XXX
+ SG_ VBUS_VCU2_N_MotorTorque : 16|16@1+ (1,-5000) [-5000|60535] "N?m" Vector__XXX
+ SG_ VBUS_VCU2_N_MCUTemperature : 32|8@1+ (1,-40) [-40|215] "°C" Vector__XXX
+ SG_ VBUS_VCU2_N_MotorTemperature : 40|8@1+ (1,-40) [-40|215] "°C" Vector__XXX
+
+BO_ 2566856687 VCU_3: 8 VCU
+ SG_ VBUS_VCU3_N_DCCurrent : 0|16@1+ (0.1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ VBUS_VCU3_N_DCVoltage : 16|16@1+ (0.1,0) [0|1000] "V" Vector__XXX
+
+BO_ 2566853359 VCU_4: 8 VCU
+ SG_ VBUS_VCU4_N_AverageConsumedPower : 16|16@1+ (0.1,0) [0|6553.5] "kW·h/100km" Vector__XXX
+ SG_ VBUS_VCU4_St_Vehicle : 35|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VBUS_VCU4_F_Motor : 41|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VBUS_VCU4_N_RemainDriverRange : 48|10@1+ (1,0) [0|1023] "km" Vector__XXX
+ SG_ VBUS_VCU4_St_BrakeSta : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566853615 VCU_5: 8 VCU
+ SG_ VBUS_VCU5_N_DCVoltage : 0|16@1+ (0.1,0) [0|1000] "V" Vector__XXX
+ SG_ VBUS_VCU5_N_DCCurrent : 16|16@1+ (0.1,-1000) [-1000|5553.5] "A" Vector__XXX
+ SG_ VBUS_VCU5_N_SOC : 32|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 2566858223 VCU_7: 8 VCU
+ SG_ VBUS_VCU7_N_MaxCellTemperature : 48|8@1+ (1,-40) [-40|125] "℃" Vector__XXX
+ SG_ VBUS_VCU7_N_MinCellTemperature : 56|8@1+ (1,-40) [-40|125] "℃" Vector__XXX
+
+BO_ 2566857711 VCU_9: 8 VCU
+ SG_ VBUS_VCU9_N_RemainTotalDriverRan : 0|16@1+ (1,0) [0|65535] "km" Vector__XXX
+ SG_ VBUS_VCU9_N_Single_CHG_PWR : 32|16@1+ (0.1,0) [0|6553.5] "kW·h" Vector__XXX
+
+BO_ 2364539648 EEC2: 8 VCU
+ SG_ AccelPedalPos1 : 8|8@1+ (0.4,0) [0|100] "%" Vector__XXX
+
+BO_ 2365484270 TCO1: 8 Vector__XXX
+ SG_ TachographVehicleSpeed : 48|16@1+ (0.00390625,0) [0|250.996] "km/h"  VCU
+
+
+
+CM_ SG_ 2566862831 VBUS_VCU1_N_AvgCellVoltage "平均单体电压";
+CM_ SG_ 2566862831 VBUS_VCU1_N_AverageCellTemperatu "电池单体平均温度值";
+CM_ SG_ 2566862831 VBUS_VCU1_RemainChargeTime "剩余充电时间";
+CM_ SG_ 2566856431 VBUS_VCU2_N_MotorSpeed "电机转速";
+CM_ SG_ 2566856431 VBUS_VCU2_N_MotorTorque "电机扭矩";
+CM_ SG_ 2566856431 VBUS_VCU2_N_MCUTemperature "电机控制器温度";
+CM_ SG_ 2566856431 VBUS_VCU2_N_MotorTemperature "电机温度";
+CM_ SG_ 2566856687 VBUS_VCU3_N_DCCurrent "母线电流";
+CM_ SG_ 2566856687 VBUS_VCU3_N_DCVoltage "母线电压";
+CM_ SG_ 2566853359 VBUS_VCU4_N_AverageConsumedPower "平均电耗";
+CM_ SG_ 2566853359 VBUS_VCU4_St_Vehicle "整车状态";
+CM_ SG_ 2566853359 VBUS_VCU4_F_Motor "电机故障";
+CM_ SG_ 2566853359 VBUS_VCU4_N_RemainDriverRange "剩余可行驶里程";
+CM_ SG_ 2566853359 VBUS_VCU4_St_BrakeSta "制动踏板状态";
+CM_ SG_ 2566853615 VBUS_VCU5_N_DCVoltage "动力电池总电压";
+CM_ SG_ 2566853615 VBUS_VCU5_N_DCCurrent "动力电池总电流";
+CM_ SG_ 2566853615 VBUS_VCU5_N_SOC "动力电池剩余电量";
+CM_ SG_ 2566858223 VBUS_VCU7_N_MaxCellTemperature "电池单体最高温度";
+CM_ SG_ 2566858223 VBUS_VCU7_N_MinCellTemperature "电池单体最低温度";
+CM_ SG_ 2566857711 VBUS_VCU9_N_RemainTotalDriverRan "剩余可行驶总里程";
+CM_ SG_ 2566857711 VBUS_VCU9_N_Single_CHG_PWR "已充电能量(单次)";
+CM_ SG_ 2364539648 AccelPedalPos1 "The ratio of actual position of the analog engine speed/torque request input device (such as an accelerator pedal or";
+CM_ SG_ 2365484270 TachographVehicleSpeed "Speed of the vehicle registered by the tachograph.";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 100000;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT 0 1215752192;
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigEnvVarType" ENUM  "int","float","undef";
+BA_DEF_ SG_  "NWM_WakeupAllowed" ENUM  "No","Yes";
+BA_DEF_ SG_  "InvalidHex" STRING ;
+BA_DEF_ BO_  "TpTxIndex" INT 0 10000;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "FixedPeriodic","Event","EnabledPeriodic","NotUsed","NotUsed","EventPeriodic","NotUsed","NotUsed","NoMsgSendType";
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 10000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "NmMessage" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 100;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 100000;
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "DiagResponse" ENUM  "No","Yes";
+BA_DEF_ BO_  "DiagRequest" ENUM  "No","Yes";
+BA_DEF_ BO_  "NetworkInitialization" ENUM  "No","Yes";
+BA_DEF_ BO_  "NetworkWakeUp" ENUM  "No","Yes";
+BA_DEF_ BO_  "NetworkInitializationCommand" ENUM  "No","Yes";
+BA_DEF_ BO_  "CANFD_BRS" ENUM  "0","1";
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","reserved","StandardCAN_FD","ExtendedCAN_FD";
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 127;
+BA_DEF_ BU_  "NmNode" ENUM  "No","Yes";
+BA_DEF_ BU_  "NetworkInitializationUsed" ENUM  "No","Yes";
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "NmCAN" INT 1 2;
+BA_DEF_ BU_  "GenNodSleepTime" INT 0 1000000;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_  "NmMessageCount" INT 0 128;
+BA_DEF_  "NmBaseAddress" HEX 0 2047;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "VersionYear" INT 0 3000;
+BA_DEF_  "VersionMonth" INT 0 12;
+BA_DEF_  "VersionDay" INT 0 31;
+BA_DEF_  "VersionNumber" INT 0 10000;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenSigEVName" "";
+BA_DEF_DEF_  "GenSigEnvVarType" "undef";
+BA_DEF_DEF_  "NWM_WakeupAllowed" "No";
+BA_DEF_DEF_  "InvalidHex" "";
+BA_DEF_DEF_  "TpTxIndex" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "NmMessage" "No";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 1;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 1;
+BA_DEF_DEF_  "DiagResponse" "No";
+BA_DEF_DEF_  "DiagRequest" "No";
+BA_DEF_DEF_  "NetworkInitialization" "No";
+BA_DEF_DEF_  "NetworkWakeUp" "No";
+BA_DEF_DEF_  "NetworkInitializationCommand" "No";
+BA_DEF_DEF_  "CANFD_BRS" "1";
+BA_DEF_DEF_  "VFrameFormat" "StandardCAN";
+BA_DEF_DEF_  "ILUsed" "";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "NmNode" "No";
+BA_DEF_DEF_  "NetworkInitializationUsed" "No";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "NmCAN" 1;
+BA_DEF_DEF_  "GenNodSleepTime" 0;
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_DEF_DEF_  "NmMessageCount" 0;
+BA_DEF_DEF_  "NmBaseAddress" 0;
+BA_DEF_DEF_  "NmType" "";
+BA_DEF_DEF_  "DBName" "BCAN";
+BA_DEF_DEF_  "VersionYear" 0;
+BA_DEF_DEF_  "VersionMonth" 0;
+BA_DEF_DEF_  "VersionDay" 0;
+BA_DEF_DEF_  "VersionNumber" 0;
+BA_DEF_DEF_  "Manufacturer" "车辆技术公众号";
+BA_DEF_DEF_  "BusType" "";
+BA_ "BusType" "CAN";
+BA_ "DBName" "LonaMa_DBC_BFDA_CEV_VCAN_Matrix_";
+BA_ "NmStationAddress" BU_ VCU 16;
+BA_ "VFrameFormat" BO_ 2566862831 1;
+BA_ "GenMsgSendType" BO_ 2566862831 8;
+BA_ "GenMsgCycleTime" BO_ 2566862831 100;
+BA_ "VFrameFormat" BO_ 2566856431 1;
+BA_ "GenMsgSendType" BO_ 2566856431 8;
+BA_ "GenMsgCycleTime" BO_ 2566856431 100;
+BA_ "VFrameFormat" BO_ 2566856687 1;
+BA_ "GenMsgSendType" BO_ 2566856687 8;
+BA_ "GenMsgCycleTime" BO_ 2566856687 100;
+BA_ "VFrameFormat" BO_ 2566853359 1;
+BA_ "GenMsgSendType" BO_ 2566853359 8;
+BA_ "GenMsgCycleTime" BO_ 2566853359 50;
+BA_ "VFrameFormat" BO_ 2566853615 1;
+BA_ "GenMsgSendType" BO_ 2566853615 8;
+BA_ "GenMsgCycleTime" BO_ 2566853615 100;
+BA_ "VFrameFormat" BO_ 2566858223 1;
+BA_ "GenMsgSendType" BO_ 2566858223 8;
+BA_ "GenMsgCycleTime" BO_ 2566858223 500;
+BA_ "VFrameFormat" BO_ 2566857711 1;
+BA_ "GenMsgSendType" BO_ 2566857711 8;
+BA_ "GenMsgCycleTime" BO_ 2566857711 500;
+BA_ "VFrameFormat" BO_ 2364539648 1;
+BA_ "GenMsgSendType" BO_ 2364539648 8;
+BA_ "GenMsgCycleTime" BO_ 2364539648 20;
+BA_ "VFrameFormat" BO_ 2365484270 1;
+BA_ "GenMsgSendType" BO_ 2365484270 8;
+BA_ "GenMsgCycleTime" BO_ 2365484270 50;
+BA_ "GenSigStartValue" SG_ 2566862831 VBUS_VCU1_N_AvgCellVoltage 0;
+BA_ "GenSigStartValue" SG_ 2566862831 VBUS_VCU1_N_AverageCellTemperatu 0;
+BA_ "GenSigStartValue" SG_ 2566862831 VBUS_VCU1_RemainChargeTime 0;
+BA_ "GenSigStartValue" SG_ 2566856431 VBUS_VCU2_N_MotorSpeed 10000;
+BA_ "GenSigStartValue" SG_ 2566856431 VBUS_VCU2_N_MotorTorque 5000;
+BA_ "GenSigStartValue" SG_ 2566856431 VBUS_VCU2_N_MCUTemperature 0;
+BA_ "GenSigStartValue" SG_ 2566856431 VBUS_VCU2_N_MotorTemperature 0;
+BA_ "GenSigStartValue" SG_ 2566856687 VBUS_VCU3_N_DCCurrent 10000;
+BA_ "GenSigStartValue" SG_ 2566856687 VBUS_VCU3_N_DCVoltage 0;
+BA_ "GenSigStartValue" SG_ 2566853359 VBUS_VCU4_N_AverageConsumedPower 0;
+BA_ "GenSigStartValue" SG_ 2566853359 VBUS_VCU4_St_Vehicle 0;
+BA_ "GenSigStartValue" SG_ 2566853359 VBUS_VCU4_F_Motor 0;
+BA_ "GenSigStartValue" SG_ 2566853359 VBUS_VCU4_N_RemainDriverRange 0;
+BA_ "GenSigStartValue" SG_ 2566853359 VBUS_VCU4_St_BrakeSta 0;
+BA_ "GenSigStartValue" SG_ 2566853615 VBUS_VCU5_N_DCVoltage 0;
+BA_ "GenSigStartValue" SG_ 2566853615 VBUS_VCU5_N_DCCurrent 10000;
+BA_ "GenSigStartValue" SG_ 2566853615 VBUS_VCU5_N_SOC 0;
+BA_ "GenSigStartValue" SG_ 2566858223 VBUS_VCU7_N_MaxCellTemperature 0;
+BA_ "GenSigStartValue" SG_ 2566858223 VBUS_VCU7_N_MinCellTemperature 0;
+VAL_ 2566853359 VBUS_VCU4_St_Vehicle 0 "正常；" 1 "一般故障（红灯常亮）" 2 "严重故障（红灯闪烁）" 3 "致命故障（闪烁蜂鸣）" ;
+VAL_ 2566853359 VBUS_VCU4_F_Motor 0 "正常" 1 "故障" ;
+VAL_ 2566853359 VBUS_VCU4_St_BrakeSta 0 "未踩制动踏板" 1 "已踩制动踏板" ;
+
